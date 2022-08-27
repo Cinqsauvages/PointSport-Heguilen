@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const CartIcon = () => {
+const CartWidget = () => {
     return (
         <a href="#modal"> <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-shopping-cart" width="48"
             height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a905b6" fill="none" stroke-linecap="round"
@@ -13,4 +13,4 @@ const CartIcon = () => {
         </a>
     )
 };
-export default CartIcon;
+export default CartWidget;

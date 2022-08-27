@@ -2,7 +2,7 @@
 import './App.css';
 import 'core-js/actual';
 import Header from './components/Header';
-import ItemList from './components/ItemListContainer';
+import  ItemListContainer from './components/ItemListContainer';
 
 let productos = [
   {
@@ -35,7 +35,7 @@ function App() {
   return (
     <div >
       <Header />
-      <ItemList  valor={mapeo}/> 
+      <ItemListContainer  valor={mapeo}/> 
     </div>
  
   );

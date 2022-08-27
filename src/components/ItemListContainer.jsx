@@ -2,7 +2,7 @@ import React from "react"
 
 
 
-const ItemList = (props) => {
+const ItemListContainer = (props) => {
     return (
         <main className="container mx-auto mt-3 ">
             <div className="card text-center bg-dark text-light">
@@ -16,4 +16,4 @@ const ItemList = (props) => {
 
 }
 
-export default ItemList;
+export default ItemListContainer;
