@@ -1,4 +1,5 @@
 import React from "react"
+import ItemCount from "./ItemCount";
 
 
 
@@ -11,6 +12,7 @@ const ItemListContainer = (props) => {
                     <li className="list-group-item bg-dark text-light list-unstyled">{props.valor}</li>
                 </ul>
             </div>
+            <ItemCount sotck={5} initial={1} onAdd={0}/>
         </main>
     )
 

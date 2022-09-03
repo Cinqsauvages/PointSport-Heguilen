@@ -31,13 +31,11 @@ let mapeo = productos.map((product) =>{
 })
 
 function App() {
-  
   return (
     <div >
       <Header />
       <ItemListContainer  valor={mapeo}/> 
     </div>
- 
   );
 }
 
