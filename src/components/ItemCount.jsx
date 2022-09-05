@@ -5,7 +5,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const [cantidad, setCantidad] = useState(initial);
     const [itemStock, setItemStock] = useState(stock);
     const [itemAdd, setItemAdd] = useState(onAdd);
-    console.log(itemStock);
+
     const disminuirCantidad = (valor) => {
         (valor > -1) ? setCantidad(valor) : alert("No tenes cantidad.");
     }
@@ -13,9 +13,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         (valor != 6) ? setCantidad(valor) : alert("No tenemos mas Stock.");
     }
     const agregarProducto = () => {
-        //valor es cantidad//
-        setItemStock(itemStock - cantidad);
-        setItemAdd(cantidad)
+        console.log(cantidad)
+        console.log(itemStock);
+        if (cantidad <= itemStock){
+            setItemStock(itemStock - cantidad);
+            setItemAdd(itemAdd + cantidad);
+        }
     }
     return (
         <div className="container text-center position-relative">
@@ -29,6 +32,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 }}>+</button>
                 <input type="button" value="Agregar Carrito" className="col" onClick={() => {
                     { agregarProducto(itemAdd) }
+                    console.log("puta")
                 }} />
                 <p id="Texto">Cantidad de productos Agregados: {itemAdd}</p>
             </div>
