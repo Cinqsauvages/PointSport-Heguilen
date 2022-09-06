@@ -7,7 +7,7 @@ import ItemList from "./ItemList";
 
 
 const ItemListContainer = () => {
-    const [items, setItems] = useState();
+    const [items, setItems] = useState([]);
     //use efect sirve para ejecutar//
     useEffect(() => {
         let productos = [
@@ -53,10 +53,10 @@ const ItemListContainer = () => {
             }
         ]
 
-        const promesa = new Promise((resolve, reject) => {
+        const promesa = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(productos);
-            }, 2000)
+            },2000)
         });
         //capturo la respuesta y la mando a items//
         promesa.then((respuesta) => {
@@ -72,7 +72,6 @@ const ItemListContainer = () => {
             <div className="text-center bg-dark rounded-3  ">
                 <h3 className="text-light">Productos</h3>
                 <ItemList items={items} />
-
             </div>
 
             <ItemCount stock={5} initial={1} onAdd={0} />
