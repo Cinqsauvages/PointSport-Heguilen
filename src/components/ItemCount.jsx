@@ -21,8 +21,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         }
     }
     return (
-        <div className="container text-center position-relative">
-            <div className="row w-25 position-absolute top-0 start-50 translate-middle-x ">
+        <div className=" text-center w-50  ">
+            <div className="row  position-absolute  start-50 translate-middle-x">
                 <button type="button" className="col" onClick={() => {
                     { disminuirCantidad(cantidad - 1) }
                 }}>-</button>
@@ -32,7 +32,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 }}>+</button>
                 <input type="button" value="Agregar Carrito" className="col" onClick={() => {
                     { agregarProducto(itemAdd) }
-                    console.log("puta")
+
                 }} />
                 <p id="Texto">Cantidad de productos Agregados: {itemAdd}</p>
             </div>
