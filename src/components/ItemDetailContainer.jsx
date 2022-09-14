@@ -73,7 +73,7 @@ const ItemDetailContainer = () => {
         
         itemId.then((productos) =>{
             setDetail(productos.filter(producto => producto.id === parseInt(id)));
-            console.log(productos.filter(producto => producto.id === parseInt(id)))
+            
         })
     },[id])
     
@@ -81,7 +81,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div id={detail.id}>
-            <ItemDetail item={detail} />
+            {detail.map(item => <ItemDetail id={item.id} nombre={item.nombre} precio={item.precio} stock={item.stock} imagen={item.imagen} descripcion={item.descripcion} />)}
         </div>
     )
 }
