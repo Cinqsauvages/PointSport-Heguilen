@@ -3,15 +3,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import calza1 from "../public/imagenes/calza1.png"
-import conjunto1 from "../public/imagenes/conjunto1.png"
-import conjunto2 from "../public/imagenes/conjunto2.png"
-import conjunto3 from "../public/imagenes/conjunto3.png"
-import top1 from "../public/imagenes/top1.png"
+import calza1 from "../imagenes/calza1.jpg";
+import conjunto1 from "../imagenes/conjunto1.jpg";
+import conjunto2 from "../imagenes/conjunto2.jpg";
+import conjunto3 from "../imagenes/conjunto3.jpg";
+import top1 from "../imagenes/top1.jpg";
 
 
 const ItemDetailContainer = () => {
-    let productos = [
+    const productos = [
         {
             id: 1,
             nombre: "Calza Basica",

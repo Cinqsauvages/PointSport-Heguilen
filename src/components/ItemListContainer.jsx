@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import calza1 from "../imagenes/calza1.png"
-import conjunto1 from "../imagenes/conjunto1.png"
-import conjunto2 from "../imagenes/conjunto2.png"
-import conjunto3 from '../imagenes/conjunto3.png';
-import top1 from "../imagenes/top1.png"
+import calza1 from "../imagenes/calza1.jpg";
+import conjunto1 from "../imagenes/conjunto1.jpg";
+import conjunto2 from "../imagenes/conjunto2.jpg";
+import conjunto3 from "../imagenes/conjunto3.jpg";
+import top1 from "../imagenes/top1.jpg";
 
 
 const ItemListContainer = () => {
@@ -16,7 +16,7 @@ const ItemListContainer = () => {
     //captura el valor de el link
     const { tipo } = useParams();
     //use effect sirve para ejecutar//
-    let productos = [
+    const productos = [
         {
             id: 1,
             nombre: "Calza Basica",

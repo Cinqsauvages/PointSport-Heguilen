@@ -1,5 +1,20 @@
-# Getting Started with Create React App
+# Project Title
+PointSport
 
+La app es un E-comerse de indumentaria deportiva.
+
+Creada con varios componentes que le dan estructura y funcionalidad a la aplicacion.
+En el cual con Router DOM se puede lograr moverse por el resto de la pagina.:
+
+Por ejemplo, si vamos /categoria/:tipo el cual puede ser (calzas, tops, conjuntos..)
+la app, utilizando un useParams tomando el valor de tipo, hago un filtro al array dejando solamente, los productos que correspondan a esa categoria. 
+
+Para volver al inicio de la pagina, se puede hacer Apretando directamente a el Logo de el NavBar.
+
+Luego tambien use /detalle/:id donde se ejecuta al seleccionar el producto que quiero. Se abrira el componente de ItemDetailContainer el cual aparecera todos los detalles del producto seleccionado. Gracias a el uso de useParams, que me filtra segun el id, tomando asi el producto especificado por el ID.
+
+#
+ Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
