@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import logo from "./imagenes/logo2.jpg";
 
-
-let logo = "./logo2.jpg"
 
 const Header = () => {
     return (
