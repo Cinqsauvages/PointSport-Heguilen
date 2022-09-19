@@ -9,7 +9,7 @@ const ItemDetail = ({ id, nombre, precio, imagen, descripcion, stock }) => {
     const [itemStock, setItemStock] = useState(stock);
     const [itemAdd, setItemAdd] = useState(0);
 
-    const onAdd = (quantity) => {
+    const onAdd = () => {
         setGoToCart(true);
     }
 
@@ -17,7 +17,7 @@ const ItemDetail = ({ id, nombre, precio, imagen, descripcion, stock }) => {
         (valor > -1) ? setCantidad(valor) : alert("No tenes cantidad.");
     }
     const aumentarCantidad = (valor) => {
-        (valor != 6) ? setCantidad(valor) : alert("No tenemos mas Stock.");
+        (valor != itemStock + 1) ? setCantidad(valor) : alert("No tenemos mas Stock.");
     }
     const agregarProducto = () => {
         if (cantidad <= itemStock) {
