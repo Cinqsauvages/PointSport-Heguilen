@@ -30,7 +30,7 @@ const Header = () => {
                 </nav>
 
                 <div className="col  text-center">
-                    <CartWidget />
+                    <Link to={"/cart"}> <CartWidget /> </Link>
                 </div>
             </div>
         </header>
