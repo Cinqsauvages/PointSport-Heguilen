@@ -64,29 +64,29 @@ const ItemDetailContainer = () => {
         }
     ]
 
-    let [detail,setDetail] = useState([]);
+    let [detail,setDetail] = useState({});
     const {id} = useParams();
     console.log(id);
 
     useEffect(() => {
         const itemId = new Promise ((resolve) =>{
             setTimeout(()=>{
-                resolve(productos);
+                resolve(productos.find(producto => producto.id === parseInt(id)) || []);
                 console.log(productos)
             },2000)
         });
         
-        itemId.then((productos) =>{
-            setDetail(productos.filter(producto => producto.id === parseInt(id)));
-            
+        itemId.then((respuesta) =>{
+            setDetail(respuesta);
+        
         })
     },[id])
     
     
 
     return (
-        <div id={detail.id}>
-            {detail.map(item => <ItemDetail id={item.id} nombre={item.nombre} precio={item.precio} stock={item.stock} imagen={item.imagen} descripcion={item.descripcion} />)}
+        <div >
+            <ItemDetail Item={detail} />
         </div>
     )
 }
