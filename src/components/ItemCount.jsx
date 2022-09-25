@@ -35,8 +35,8 @@ const ItemCount = ( props ) => {
                         <input type="text" className="form-control" value={counter} onChange={() => { }} />
                         <input type="button" className="btn btn-secondary" value="+" onClick={() => { aumentarCantidad(counter + 1) }} />
                     </div>
-                    <div className="d-grid gap-2 py-2">
-                        <button className="btn btn-secondary" type="button" onClick={() => { agregarProductos() }}>Agregar</button>
+                    <div className="d-grid gap-2 py-2 ">
+                        <button className="btn btn-secondary  " type="button" onClick={() => { agregarProductos() }}>Agregar</button>
                     </div>
                 </div>
             </div>

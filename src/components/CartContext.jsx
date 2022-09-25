@@ -5,15 +5,13 @@ export const CartContext = createContext();
 
 const Provider = ({children}) =>{
     const [cart,setCart] = useState([]);
-
+  
     const addItem = (item,cantidad) =>{
-        if(isInCart(item.id)) {
-            let producto = cart.find(x=> x.id === item.id);
-
-            cart[cart.indexOf(producto)].cantidad += cantidad;
-            setCart([...cart]);
+        const producto = {...item,cantidad};
+        if(isInCart(producto.id)) {
+           sumarCantidad(producto)
         }else{
-            setCart([...cart, {...item, cantidad:cantidad}]);
+            setCart([...cart,producto]);
         }
     }
 
@@ -22,15 +20,38 @@ const Provider = ({children}) =>{
     }
 
     const isInCart = (id) =>{
+        //devuelve true or false//
         return cart.some(item=> item.id === id);
     }
 
     const cartTotal = () => {
         return cart.reduce((total,item) => total += item.cantidad, 0);
     }
+ 
+    const sumarCantidad = (producto) =>{
+        const cartUpdated = cart.map((itemCart)=>{
+            if(producto.id === itemCart.id){
+                const productoUpdated = {
+                    ...itemCart,
+                    cantidad: itemCart.cantidad + producto.cantidad
+                }
+                return productoUpdated;
+            }else{
+                return itemCart;
+            } 
+        })
+        //seteo producto con los prod actualizados.
+        setCart(cartUpdated);
+    }
+
+    const deleteOne = (id) =>{
+        const productFilter = cart.filter((prod)=> prod.id !== id);
+        setCart(productFilter);
+    };
+  
 
     return(
-        <CartContext.Provider value = {{cart,addItem,clear,isInCart}}>
+        <CartContext.Provider value = {{cart, addItem, clear, isInCart, cartTotal, deleteOne}}>
             {children}
         </CartContext.Provider>
     )
