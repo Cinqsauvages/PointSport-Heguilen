@@ -26,8 +26,8 @@ const ItemListContainer = () => {
     }, [tipo]);
 
     return (
-        <main className="container mx-auto mt-3 ">
-            <div className="text-center bg-dark rounded-3  ">
+        <main className="container mx-auto mt-3   ">
+            <div className="text-center bg-dark rounded-3 border border-light border-2  ">
                 <h3 className="text-light">Productos</h3>
                 {loading ? <Loading /> : <ItemList items={items} />}
             </div>

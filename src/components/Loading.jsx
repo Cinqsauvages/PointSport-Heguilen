@@ -6,7 +6,7 @@ const Loading = () => {
         <div className="row">
             <div className="col-md-12 text-center p-5 ">
                 <p><img src={Logo} alt="PointSport" className="rounded-circle" width="180" /></p>
-                <h3>Cargando...</h3>
+                <h3 className="text-light">Cargando...</h3>
             </div>
         </div>
     )

@@ -29,7 +29,7 @@ const Cart = () => {
 
             </div>
         ))}
-        <div className="list-group list-group m-5 d-flex align-items-center  " ><p className="fw-bold fs-4">Precio total : ${total} </p></div>
+        <div className="list-group list-group m-5 d-flex align-items-center  " ><p className="fw-bold fs-4 text-light">Precio total : ${total} </p></div>
         <button className="badge bg-dark rounded-pill fs-6 p-2 position-relative start-50 translate-middle " onClick={() => { clear() }}>Vaciar Carrito</button>
     </>
 }

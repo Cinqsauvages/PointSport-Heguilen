@@ -18,7 +18,7 @@ const ItemDetail = ({ Item }) => {
     }
 
     return (
-        <div className="card m-3 shadow p-3 mb-5 bg-body rounded border border-dark " >
+        <div className="card m-3 shadow p-3 mb-5 bg-body rounded border  " >
             <div className="row g-0 m-3 ">
                 <div className="col-md-3 ">
                     <img src={Item.imagen} className="img-fluid rounded-start w-75" alt="..." />
