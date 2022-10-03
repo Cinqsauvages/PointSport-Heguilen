@@ -48,10 +48,19 @@ const Provider = ({children}) =>{
         const productFilter = cart.filter((prod)=> prod.id !== id);
         setCart(productFilter);
     };
-  
+   
+    const totalPrecio = () => {
+        const copia =[...cart];
+        let count = 0;
+        copia.forEach((producto) => {
+            count = count + producto.cantidad * producto.precio
+            
+        })
+        return count
+    }
 
     return(
-        <CartContext.Provider value = {{cart, addItem, clear, isInCart, cartTotal, deleteOne}}>
+        <CartContext.Provider value = {{cart, addItem, clear, isInCart, cartTotal, deleteOne, totalPrecio}}>
             {children}
         </CartContext.Provider>
     )

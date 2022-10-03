@@ -1,17 +1,11 @@
 import React from "react";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-    const { cart, deleteOne, clear } = useContext(CartContext);
-    let arrayPrecios = [];
-    cart.map((prod) => (
-       arrayPrecios.push(prod.precio * prod.cantidad)
-    
-    ))
-    let total = arrayPrecios.reduce((a,b)=> a + b,0);
-    
-   
+    const { cart, deleteOne, clear, totalPrecio } = useContext(CartContext);
+    let total = totalPrecio();
     return <>
         {cart.map((prod) => (
             <div key={prod.id} className="list-group list-group m-5 d-flex align-items-center " >
@@ -31,6 +25,7 @@ const Cart = () => {
         ))}
         <div className="list-group list-group m-5 d-flex align-items-center  " ><p className="fw-bold fs-4 text-light">Precio total : ${total} </p></div>
         <button className="badge bg-dark rounded-pill fs-6 p-2 position-relative start-50 translate-middle " onClick={() => { clear() }}>Vaciar Carrito</button>
+        <Link to="/checkout" className="badge bg-dark rounded-pill fs-6 p-2 position-relative start-50 translate-middle "> Checkout </Link>
     </>
 }
 

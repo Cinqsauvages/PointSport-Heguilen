@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart'
 import Provider from './components/CartContext';
 import Error404 from './components/error404';
+import Form from './components/Form';
 
 function App() {
   //browserRouter es un contendor de Rutas//
@@ -22,6 +23,7 @@ function App() {
             <Route path='/detalle/:id' element={<ItemDetailContainer />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route path={"*"} element={<Error404 />} />
+            <Route path="/checkout" element={<Form/>} />
           </Routes>
         </BrowserRouter>
     </Provider>
