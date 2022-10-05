@@ -1,10 +1,11 @@
 import React from "react";
 import { useState,useContext } from "react";
 import {CartContext} from "./CartContext";
+import './ItemDetail.css'
 
 const ItemCount = ( props ) => {
     const {item} = props;
-    const {cart, setCart, addItem} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
     const [counter, setCounter] = useState(props.initial);
     const [itemStock, setItemStock] = useState(5);
 
@@ -31,12 +32,12 @@ const ItemCount = ( props ) => {
             <div className="row">
                 <div className="col-md-8 center">
                     <div className="input-group">
-                        <input type="button" className="btn btn-secondary" value="-" onClick={() => { disminuirCantidad(counter - 1) }} />
+                        <input type="button" className="btn carrito" value="-" onClick={() => { disminuirCantidad(counter - 1) }} />
                         <input type="text" className="form-control" value={counter} onChange={() => { }} />
-                        <input type="button" className="btn btn-secondary" value="+" onClick={() => { aumentarCantidad(counter + 1) }} />
+                        <input type="button" className="btn carrito" value="+" onClick={() => { aumentarCantidad(counter + 1) }} />
                     </div>
                     <div className="d-grid gap-2 py-2 ">
-                        <button className="btn btn-secondary  " type="button" onClick={() => { agregarProductos() }}>Agregar</button>
+                        <button className="btn carrito" type="button" onClick={() => { agregarProductos() }}>Agregar</button>
                     </div>
                 </div>
             </div>

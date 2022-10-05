@@ -1,0 +1,21 @@
+.contenidoCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin:15px;
+    border-radius: 50px;
+}
+.listaCarro{
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.finalCarrito{
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}

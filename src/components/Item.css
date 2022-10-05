@@ -1,0 +1,20 @@
+.efecto{
+    width: 25%;
+    height:auto;
+}
+
+
+.efecto:hover{
+    width: 26%;
+    opacity: 90%;
+}
+
+.detalles{
+    margin-bottom: 25%;
+    padding: 0;
+    
+}
+.card-img-top{
+    width: 250px;
+    height: 270px;
+}

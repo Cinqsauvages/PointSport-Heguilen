@@ -1,0 +1,13 @@
+.cardDetail{
+    display: flex;
+    width: 75%;
+    background-color:white;
+    border-radius: 25px;
+    gap:5%;
+}
+
+.carrito{
+    width: auto;
+    background-color: black;
+    color:white;
+}

@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     
 
     return (
-        <div >
+        <div className="d-flex justify-content-center">
             {loading ? <Loading /> : <ItemDetail Item={detail} /> }
             
         </div>
